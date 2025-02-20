@@ -4,10 +4,14 @@
    
     <title>Toggler</title>
     <style>
+      .body{
+        background-color: #f6efef;
+      }  
+        
 .container {
 width: 300px;
-height: 300px;
-background: color #f1f1f1; ;
+padding: 20px;
+
 display: block;
 margin: 0 auto;
 border-radius: 10px;
@@ -22,17 +26,68 @@ margin-left: 50px;
     display: block;
     margin: 10px auto;
 }
+.buttons{
+    display: flex;
+    justify-content:space-around;
+    margin-top: 20px;
+}
+.btn-t0ggle{
+    width: 70px;
+    font-size: 20px;
+    border: 20px;
+    border-radius: 500px;
+}
+.btn0{
+    background-color: #6b5757;
+}
+.btn1{
+background-color: rgb(190, 204, 240);
+color: black;
+}
+.btn2{
+background-color: rgb(218, 216, 209);
+color: black;
+}
+.btn3{
+background-color: rgb(247, 138, 60);
+color: black;
+}
     </style>
 </head>
-<body>
-    <div class="container">
+<body class="body">
+    
+    <div class="container" id="container">
     <h1 class="h1">Your favourite</h1>
     <img src="./img/glass.png" id="glass" class="glass"/>
+    
+    <div class="buttons">
+        <button class="btn-t0ggle btn0" onclick="Emty()">Emty</button>
+        <button class="btn-t0ggle btn1" onclick="Water()">Water</button>
+        <button class="btn-t0ggle btn2 "onclick="Milk()">Milk</button>
+        <button class="btn-t0ggle btn3"onclick="Juice()">Juice</button>
     </div>
-    <div>
-        <button>water</button>
-        <button>milk</button>
-        <button>juice</button>
-    </div>
+    <script>
+        const glassElement= document.getElementById("glass");
+        const containerElement= document.getElementById("container");
+
+        function Emty() {
+         glassElement.src = "./img/glass.png";
+         containerElement.style.backgroundColor = "white";
+        }
+
+        function Water() {
+         glassElement.src = "./img/glass-of-water.png";
+         containerElement.style.backgroundColor = "red";
+
+        }
+        function Milk() {
+         glassElement.src = "./img/drink.png";
+         
+        }
+        function Juice() {
+         glassElement.src = "./img/orange-juice.png";
+         
+        }
+    </script>
 </body>
 </html>
