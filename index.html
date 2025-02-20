@@ -3,8 +3,36 @@
 <head>
    
     <title>Toggler</title>
+    <style>
+.container {
+width: 300px;
+height: 300px;
+background: color #f1f1f1; ;
+display: block;
+margin: 0 auto;
+border-radius: 10px;
+border: 1px solid #ccc;
+}
+.h1{
+margin-left: 50px;
+
+}
+.glass{
+    height: 200px;
+    display: block;
+    margin: 10px auto;
+}
+    </style>
 </head>
 <body>
-    <h1>choose your favourite</h1>
+    <div class="container">
+    <h1 class="h1">Your favourite</h1>
+    <img src="./img/glass.png" id="glass" class="glass"/>
+    </div>
+    <div>
+        <button>water</button>
+        <button>milk</button>
+        <button>juice</button>
+    </div>
 </body>
 </html>
